@@ -1,0 +1,130 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+}
+
+.container ul, .container li {
+    list-style: none;
+    padding: 0;
+}
+
+.container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(191, 191, 191);
+}
+
+.nav-list {
+    /*display: flex;*/
+    background-color: rgb(191, 191, 191);
+}
+
+.nav-list li {
+    width: 120px;
+    height: 30px;
+    float: right;
+}
+
+.nav-list a {
+    width: 100%;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.nav-list a:hover {
+    color: darkcyan;
+    border-bottom: 3px solid seagreen;
+}
+
+.active {
+    color: darkcyan !important;
+    font-weight: 900;
+    border-bottom: 3px solid seagreen;
+}
+
+.content {
+
+}
+
+.content-left {
+    position: absolute;
+    bottom: 30px;
+    left: 5px;
+    top: 75px;
+    width: 180px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgb(234, 234, 234);
+    color: rgb(129, 129, 129) !important;
+}
+
+.content-left ul {
+    margin: 0;
+}
+
+.content-left li {
+    border-bottom: 1px solid #999;
+}
+
+.content-left a {
+    display: block;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.content-left a:hover {
+    background-color: white;
+    border: 1px transparent;
+    border-radius: 15px;
+    color: darkcyan !important;
+
+}
+
+.active2 {
+    color: darkcyan !important;
+    font-size: 18px;
+
+}
+
+.content-right {
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    left: 197px;
+    right: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    background-color: rgb(225,225,225);
+
+}
+
+.content-right h4{
+    font-weight: 400;
+    margin: 0;
+    height:40px;
+    border-bottom: 1px solid lightseagreen;
+    line-height: 40px;
+    padding-left: 20px;
+}
+.chart{
+    background-color:white ;
+    position: absolute;
+    top:42px;
+    bottom:0;
+    right:0;
+    left:0;
+    padding-left: 20px;
+}

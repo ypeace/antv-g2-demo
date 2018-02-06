@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>地图与热力图</title>
+  <script src="https://a.alipayobjects.com/jquery/jquery/1.11.1/jquery.js"></script>
+  <script src="https://gw.alipayobjects.com/as/g/datavis/g2/2.3.13/index.js"></script>
+</head>
+<body>
+<div id="c1"></div>
+<style type="text/css">
+  #c1 {
+    /*background-image: url(https://zos.alipayobjects.com/rmsportal/kqiqfRADgLgCCNJRHhDv.png);*/
+    background-repeat: no-repeat;
+    width: 650px;
+    height: 450px;
+    background-size: 100%;
+    margin: 0 auto;
+  }
+</style>
+<script>
+  $.getJSON('../../../static/data/china.json', function(mapData) {
+    $.getJSON('../../../static/data/temp.json', function(data) {
+      var Stat = G2.Stat;
+      var chart = new G2.Chart({
+        id: 'c1',
+        width: 650,
+        height: 450,
+        plotCfg: {
+          margin: [5, 185, 140, 53]
+        }
+      });
+      chart.source(data, {
+        'out-temperature': {
+          alias: '室外温度'
+        }
+      });
+      chart.coord('map', {
+        projection: 'mercator',
+        max: [134.77, 63.68],
+        min: [73.60, 18.48]
+      });
+      chart.tooltip({
+        map: {
+          'title': 'city',
+          value: 'out-temperature'
+        }
+      });
+      chart.heatmap().position(Stat.map.location('longitude*latitude')).color('out-temperature', '#50a3ba-#eac736-#d94e5d')
+        .size(15) //调整热力图一个点可以影响的范围
+        .label('city',{label:{opacity: 0}}); // 设置文本但是不显示，使得tooltip可以显示对应的字段
+      chart.render();
+    });
+  });
+</script>
+</body>
+</html>

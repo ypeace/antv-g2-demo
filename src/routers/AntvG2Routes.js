@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import './style.css';
-import Point from "../pages/g2/Point";
-import Line from "../pages/g2/Line";
+
+import Point from "../pages/g2/DoubleYChart";
+import Line from "../pages/g2/BaseChart";
+import HotChart from "../pages/g2/HotChart"
+import HotMap from "../pages/g2/HotMap"
 
 Date.prototype.format = function(fmt) {
   let  o = {
@@ -34,9 +37,9 @@ export default class AntvG2Routes extends Component {
   }
 
   componentWillMount(){
-    const pathFirst = window.location.pathname.split('/')[2]||'point';
+    const pathFirst = window.location.pathname.split('/')[2]||'BaseChart';
     const url = this.props.match.url;
-    const pathForComponent = `${url}/${pathFirst}`||`${url}/point`;
+    const pathForComponent = `${url}/${pathFirst}`||`${url}/BaseChart`;
     const targetObj = this.menu.filter(item=>item.path ==='/'+ pathFirst);
     this.setState({
       pathForComponent,
@@ -47,15 +50,25 @@ export default class AntvG2Routes extends Component {
 
   menu = [
     {
-      path: '/point',
-      name: '点图示例',
+      path: '/BaseChart',
+      name: '基础图例',
       component: Point,
-      title: '点的图'
+      title: '柱状图、点图、线图'
     }, {
-      path: '/line',
-      name: '线图示例',
+      path: '/DoubleYChart',
+      name: '双Y轴图例',
       component: Line,
-      title: '线的图'
+      title: '双Y轴图例'
+    },{
+      path:'/HotChart',
+      name:'热力图',
+      title:'热力图',
+      component:HotChart,
+    },{
+      path:'/HotMap',
+      name:'热力地图',
+      title:'热力地图',
+      component:HotMap,
     }
   ];
 

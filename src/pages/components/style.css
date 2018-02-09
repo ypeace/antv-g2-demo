@@ -1,0 +1,49 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #cccccc;
+}
+
+.title{
+    padding-left: 30px;
+}
+
+tbody {
+    color: #666;
+    line-height: 20px;
+}
+
+td {
+    border-right: 1px solid #cccccc;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+thead {
+    line-height: 30px;
+    color: #000;
+    font-size: 12px;
+}
+
+thead td {
+
+    border: 1px solid #e5e5e5;
+    min-width: 15px;
+}
+
+.lightblue{
+    background-color: #A9EFF0;
+}
+
+
+/*tbody tr:nth-child(odd) {*/
+    /*background-color: #f7f7f7;*/
+/*}*/
+
+tr:hover {
+    background-color: #e9e9e9;
+    cursor: pointer
+}

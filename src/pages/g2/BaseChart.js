@@ -17,7 +17,6 @@ export default class AntvG2 extends Component {
 
   fetchData () {
     (async _ => {
-      // const result = await fetchLoginLiveness({query});
       const result = [
         {
           "date": '2018-01-23T16:00:00.000',

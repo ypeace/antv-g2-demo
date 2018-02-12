@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './style.css';
 import Echart from '../pages/echart/Echart';
 import AntvG2Routes from "../routers/AntvG2Routes";
-import MapIndex from "../pages/map/MapIndex";
+import MapRoutes from "../routers/MapRoutes";
 
 Date.prototype.format = function(fmt) {
   let  o = {
@@ -73,7 +73,7 @@ class IndexRoute extends Component {
 
           <Route path="/g2" component={AntvG2Routes}/>
           <Route path="/echart" component={Echart}/>
-          <Route path="/map" component={MapIndex}/>
+          <Route path="/map" component={MapRoutes}/>
         </div>
       </Router>
     );

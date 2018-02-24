@@ -4,6 +4,7 @@ import './style.css';
 import Echart from '../pages/echart/Echart';
 import AntvG2Routes from "../routers/AntvG2Routes";
 import MapRoutes from "../routers/MapRoutes";
+import ComponentRoutes from '../routers/ComponentRoutes'
 
 Date.prototype.format = function(fmt) {
   let  o = {
@@ -64,6 +65,13 @@ class IndexRoute extends Component {
               <li
                 onClick={() => {
                   this.setState({
+                    active: 'component'
+                  })
+                }}
+              ><Link to="/component" className={active === 'component' ? "active" : null}>Component</Link></li>
+              <li
+                onClick={() => {
+                  this.setState({
                     active: 'g2'
                   })
                 }}
@@ -74,6 +82,7 @@ class IndexRoute extends Component {
           <Route path="/g2" component={AntvG2Routes}/>
           <Route path="/echart" component={Echart}/>
           <Route path="/map" component={MapRoutes}/>
+          <Route path="/component" component={ComponentRoutes}/>
         </div>
       </Router>
     );

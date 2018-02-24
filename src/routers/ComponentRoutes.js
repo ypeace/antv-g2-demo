@@ -9,7 +9,7 @@ import HotMap from "../pages/g2/HotMap"
 import AreaChart from '../pages/g2/AreaChart'
 import TableChart from '../pages/g2/TableChart'
 
-export default class AntvG2Routes extends Component {
+export default class ComponentRoutes extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ export default class AntvG2Routes extends Component {
   menu = [
     {
       path: '/BaseChart',
-      name: '地图入门',
+      name: '基础组件',
       component: Point,
       title: '柱状图、点图、线图'
     }, {
@@ -97,6 +97,3 @@ export default class AntvG2Routes extends Component {
     </div>
   }
 }
-/*
-今天闲了整整一天，准备6点滚回去收拾下屋子然后
-* */

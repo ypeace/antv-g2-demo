@@ -138,7 +138,6 @@ export default class AntvG2 extends Component {
     })()
   }
 
-
   renderChart (results) {
     const dataArr = [];
     results.forEach((item) => {

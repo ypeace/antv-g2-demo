@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import './style.css';
-
-import Point from "../pages/g2/DoubleYChart";
-import Line from "../pages/component/BaseChart";
-import HotChart from "../pages/g2/HotChart"
-import HotMap from "../pages/g2/HotMap"
-import AreaChart from '../pages/g2/AreaChart'
-import TableChart from '../pages/g2/TableChart'
+import Test from "../pages/component/Test";
 
 export default class ComponentRoutes extends Component {
   constructor (props) {
@@ -18,9 +12,9 @@ export default class ComponentRoutes extends Component {
   }
 
   componentWillMount(){
-    const pathFirst = window.location.pathname.split('/')[2]||'BaseChart';
+    const pathFirst = window.location.pathname.split('/')[2]||'test';
     const url = this.props.match.url;
-    const pathForComponent = `${url}/${pathFirst}`||`${url}/BaseChart`;
+    const pathForComponent = `${url}/${pathFirst}`;
     const targetObj = this.menu.filter(item=>item.path ==='/'+ pathFirst);
     this.setState({
       pathForComponent,
@@ -31,35 +25,10 @@ export default class ComponentRoutes extends Component {
 
   menu = [
     {
-      path: '/BaseChart',
-      name: '基础组件',
-      component: Point,
-      title: '柱状图、点图、线图'
-    }, {
-      path: '/DoubleYChart',
-      name: '双Y轴图例',
-      component: Line,
-      title: '双Y轴图例'
-    },{
-      path:'/HotChart',
-      name:'热力图',
-      title:'热力图',
-      component:HotChart,
-    },{
-      path:'/areaChart',
-      name:'区域层叠图',
-      title:'留存层叠图',
-      component:AreaChart,
-    },{
-      path:'/tableChart',
-      name:'列表图',
-      title:'列表图',
-      component:TableChart,
-    },{
-      path:'/HotMap',
-      name:'热力地图',
-      title:'热力地图',
-      component:HotMap,
+      path: '/test',
+      name: '草稿纸',
+      component: Test,
+      title: '组件诞生的地方'
     }
   ];
 

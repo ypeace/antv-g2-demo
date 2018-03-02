@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './style.css';
-import Echart from '../pages/echart/Echart';
+import Echart from '../routers/EchartRouter';
 import AntvG2Routes from "../routers/AntvG2Routes";
 import MapRoutes from "../routers/MapRoutes";
 import ComponentRoutes from '../routers/ComponentRoutes'
@@ -52,17 +52,17 @@ class IndexRoute extends Component {
               <li
                 onClick={() => {
                   this.setState({
+                    active: 'echart3'
+                  })
+                }}
+              ><Link to="/echart" className={active === 'echart' ? "active" : null}>Echart</Link></li>
+              <li
+                onClick={() => {
+                  this.setState({
                     active: 'map'
                   })
                 }}
               ><Link to="/map" className={active === 'map' ? "active" : null}>Map</Link></li>
-              {/*<li*/}
-              {/*onClick={() => {*/}
-              {/*this.setState({*/}
-              {/*active: 'echart3'*/}
-              {/*})*/}
-              {/*}}*/}
-              {/*><Link to="/echart" className={active === 'echart' ? "active" : null}>Echart</Link></li>*/}
               <li
                 onClick={() => {
                   this.setState({

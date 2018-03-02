@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import './style.css';
-import Map from "../pages/map/MapIndex";
+import Echart from "../pages/echart/Echart";
 
 export default class AntvG2Routes extends Component {
   constructor (props) {
@@ -12,7 +12,7 @@ export default class AntvG2Routes extends Component {
   }
 
   componentWillMount(){
-    const pathFirst = window.location.pathname.split('/')[2]||'BaseMap';
+    const pathFirst = window.location.pathname.split('/')[2]||'BaseEchart';
     const url = this.props.match.url;
     const pathForComponent = `${url}/${pathFirst}`;
     const targetObj = this.menu.filter(item=>item.path ==='/'+ pathFirst);
@@ -24,10 +24,10 @@ export default class AntvG2Routes extends Component {
   }
 
   menu = [{
-      path: '/BaseMap',
-      name: '地图入门',
-      component: Map,
-      title: '地图'
+      path: '/BaseEchart',
+      name: 'echart入门',
+      component: Echart,
+      title: 'echart入门'
     }
   ];
 

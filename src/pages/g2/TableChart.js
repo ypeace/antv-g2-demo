@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import dateForDay from '../../data/date N周留存';
 import dateForWeek from '../../data/data 留存';
-import Table from '../components/Table'
+import Table from '../projectComponents/Table'
 
 export default class HotMap extends Component {
 

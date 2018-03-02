@@ -27,6 +27,7 @@ export default class HotMap extends Component {
       const moreThan30 = Math.abs(item.totalCount - totalNum);
       freshIntervals.push({ ...item.freshInterval, date, moreThan30 })
     });
+    console.log(freshIntervals);
     let frame = new Frame(freshIntervals);
     frame = Frame.combinColumns(frame, days, '人数', '天数', 'date');
     console.log(frame);

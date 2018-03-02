@@ -1,0 +1,9 @@
+.button-active{
+   background-color: cornflowerblue;
+}
+
+button{
+    width:220px;
+    height:40px;
+    cursor: pointer;
+}

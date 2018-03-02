@@ -3,7 +3,7 @@ import { Route, Link } from "react-router-dom";
 import './style.css';
 
 import Point from "../pages/g2/DoubleYChart";
-import Line from "../pages/g2/BaseChart";
+import Line from "../pages/component/BaseChart";
 import HotChart from "../pages/g2/HotChart"
 import HotMap from "../pages/g2/HotMap"
 import AreaChart from '../pages/g2/AreaChart'

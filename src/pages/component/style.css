@@ -1,0 +1,30 @@
+.test-box {
+    counter-reset: paracount;
+}
+
+.test-box p:before {
+    content: counter(paracount) " . ";
+    counter-increment: paracount;
+}
+
+.test-box p:after {
+    content: " 娃哈哈 ";
+    background-color: paleturquoise;
+    border: 1px solid #666666;
+}
+
+.test-box p:hover {
+    background-color: brown;
+}
+
+.box-shadow {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    box-shadow: 30px 10px 30px 5px blue, 10px 20px 30px 25px red;
+}
+
+.outline {
+    outline: 10px solid red;
+}
+

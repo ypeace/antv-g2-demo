@@ -28,7 +28,6 @@ export default class HotMap extends Component {
         render: (row) => {
           const dateAfter7 = new Date(row.date).getTime()+3600*24*7*1000;
           //第二种：          console.log('7 days'.after(new Date(row.date)));
-
           return new Date(row.date).format("MM/dd") + "——" + new Date(dateAfter7).format("MM/dd")
         }
       },
@@ -37,16 +36,6 @@ export default class HotMap extends Component {
         render: (row) => row.depositCount
       }
     ];
-    // let columns2 = [
-    //   {
-    //     name: '时间',
-    //     render: (row) => new Date(row.date).format("MM/dd") +"——"+ new Date(row.date).format("MM/dd")
-    //   },
-    //   {
-    //     name: '当周订单数',
-    //     render: (row) => row.orderCount
-    //   }
-    // ];
 
     let columns3 = [
       {
@@ -67,8 +56,6 @@ export default class HotMap extends Component {
         render: (row) => {
           const num = (row.depositRetentionInterval[Number(item)] * 100 / row.depositCount).toFixed(2);
           const percent = (row.depositRetentionInterval[Number(item)]) ? num + "%" : null;
-
-
           return <div style={{
             backgroundColor: this.colorForNumber(num),
             width: "100%",
@@ -76,7 +63,7 @@ export default class HotMap extends Component {
           }}>{row.depositRetentionInterval[Number(item)]}/{percent}</div>
         }
       })
-    })
+    });
 
     const days2 = [1, 2, 3, 4, 5, 6, 7];
     days2.forEach((item) => {
@@ -107,12 +94,6 @@ export default class HotMap extends Component {
         columns={columns1}
         dataSource={dateForDay}
       />
-      {/*<Table*/}
-      {/*title ="下单账户周留存"*/}
-      {/*columns={columns2}*/}
-      {/*dataSource={dateForDay}*/}
-      {/*/>*/}
-
     </div>
   }
 

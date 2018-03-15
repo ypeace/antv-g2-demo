@@ -21,7 +21,6 @@ export default ({ dataSource = [], columns = [] , title = ""}) => {
             <tr
               key={index}>{columns.map(({ render = _ => null }, index) => {
               return <td
-                // className={index > 1? "lightblue" : ''}
                 key={index}>{render(row)}</td>;
             })}</tr>
           );

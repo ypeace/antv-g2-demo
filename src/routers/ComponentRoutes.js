@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import './style.css';
 import Test from "../pages/component/Test";
+import AntDesign from "../pages/component/AntDesign";
 
 export default class ComponentRoutes extends Component {
   constructor (props) {
@@ -29,6 +30,11 @@ export default class ComponentRoutes extends Component {
       name: '草稿纸',
       component: Test,
       title: '组件诞生的地方'
+    }  ,  {
+      path: '/antDesign',
+      name: '练习',
+      component: AntDesign,
+      title: '练习'
     }
   ];
 

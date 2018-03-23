@@ -12,10 +12,10 @@ export default class AntvG2 extends Component {
   }
 
   componentWillMount () {
-    console.log(window.screen.width)
-    console.log(window.screen.height)
-    console.log(window.innerWidth)
-    console.log(window.innerHeight)
+    // console.log(window.screen.width)
+    // console.log(window.screen.height)
+    // console.log(window.innerWidth)
+    // console.log(window.innerHeight)
     // window.print()提示用户打印页面
     window.prompt("23434343434")
   }

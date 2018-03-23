@@ -64,8 +64,8 @@ export default class AntvG2Routes extends Component {
       component: TableChart,
     }, {
       path: '/HotMap',
-      name: '热力地图',
-      title: '热力地图',
+      name: '饼图',
+      title: '饼图',
       component: HotMap,
     }
   ];

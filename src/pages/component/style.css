@@ -8,7 +8,7 @@
 }
 
 .test-box p:after {
-    content: " 娃2哈哈 ";
+    content: " 娃哈哈 ";
     background-color: paleturquoise;
     border: 1px solid #666666;
 }

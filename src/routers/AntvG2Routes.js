@@ -36,7 +36,7 @@ export default class AntvG2Routes extends Component {
       path: '/BaseChart',
       name: '基础图例',
       component: Point,
-      title: '柱状图、点图、线图'
+      title: '柱状图、点图dain 、线图'
     }, {
       path: '/DoubleYChart',
       name: '双Y轴图例',

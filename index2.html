@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>供应链管理系统门店端</title>
+  <style>
+    div {
+      width: 100%
+    }
+
+    div .body > div {
+      width: 200px
+    }
+
+    .block {
+      width: 300px
+    }
+
+    #content {
+      width: 400px
+    }
+
+    .red {
+      color: red
+    }
+
+    .blue {
+      color: blue
+    }
+
+
+  </style>
+<body>
+<div class="body">
+  <div id="content" class="blue block red">ddddd</div>
+</div>
+<div id="root">
+  <input name="start" type="text" id="start"/>
+  <input name="end" type="text" id="end"/>
+
+</div>
+</body>
+<script type="text/javascript">
+
+
+
+  function fn(){
+    var startInput = document.getElementById("start")
+    var endInput = document.getElementById("end")
+    var a = startInput.value;
+    var b = endInput.value;
+    if (typeof a === "number" && typeof b === "number" && a < b) {
+      var arr = [];
+      for (var i = 0; i < 10; i++) {
+        arr[i] = Math.random() * (b - a) + a
+      }
+      arr.sort(function (m, n) {
+        return m - n;
+      })
+      console.log("排序后的数组",arr)
+      return arr
+    } else {
+      alert("不满足条件")
+    }
+  }
+  fn()
+
+</script>
+</html>

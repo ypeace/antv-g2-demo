@@ -43,7 +43,9 @@ export default class AntvG2 extends Component {
       <embed src = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"/>
       <hr/>
       <div className="test-box">
-        <p>我喜欢橘子</p>
+        <p
+        style={{zoom:'150%'}}
+        >我喜欢橘子</p>
         <p>我喜欢苹果</p>
       </div>
       <hr/>

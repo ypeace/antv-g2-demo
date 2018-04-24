@@ -8,7 +8,7 @@
 }
 
 .test-box p:after {
-    content: " 哈哈哈啊 ";
+    content: " 哈哈哈 ";
     background-color: paleturquoise;
     border: 1px solid #666666;
 }
@@ -27,4 +27,6 @@
 .outline {
     outline: 10px solid red;
 }
+
+
 

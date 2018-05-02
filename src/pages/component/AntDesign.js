@@ -102,7 +102,7 @@ export default class AntvG2 extends Component {
     }, () => {
       const fatherArr = this.findFathers('444')
     });
-
+/**/
   }
 
   findFathers = (id) => {

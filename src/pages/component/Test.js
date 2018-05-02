@@ -45,7 +45,7 @@ export default class AntvG2 extends Component {
       <div className="test-box">
         <p
         style={{zoom:'150%'}}
-        >我喜欢橘子</p>
+        >我喜欢ni </p>
         <p>我喜欢苹果</p>
       </div>
       <hr/>

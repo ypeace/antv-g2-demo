@@ -17,7 +17,7 @@ export default class AntvG2 extends Component {
     // console.log(window.innerWidth)
     // console.log(window.innerHeight)
     // window.print()提示用户打印页面
-    window.prompt("23434343434")
+    window.prompt("444444")
   }
 
   render () {

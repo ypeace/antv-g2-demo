@@ -21,7 +21,7 @@ export default class AntvG2 extends Component {
         {
           "date": '2018-01-23T16:00:00.000',
           "_id": 1212121212,
-          "orderNum": 3333,
+          "orderNum": 1111,
           "depositNum": 212,
           "reservationNum": 190,
           "orderPercent": 0.3,

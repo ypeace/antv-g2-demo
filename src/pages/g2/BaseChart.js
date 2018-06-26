@@ -6,8 +6,7 @@ import { Stat } from "g2";
 export default class AntvG2 extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   componentWillMount () {
@@ -29,8 +28,8 @@ export default class AntvG2 extends Component {
           "reservationPercent": 0.5,
           "totalCount": 434,
           freshInterval: {
-            1:0.1,
-            2:0.09,
+            1: 0.1,
+            2: 0.09,
           },
         }, {
           "date": '2018-01-22T16:00:00.000',
@@ -72,7 +71,7 @@ export default class AntvG2 extends Component {
           "depositPercent": 0.56,
           "reservationPercent": 0.42,
           "totalCount": 357,
-        },{
+        }, {
           "date": '2018-01-27T16:00:00.000',
           "_id": 1212121212,
           "orderNum": 3333,
@@ -83,8 +82,8 @@ export default class AntvG2 extends Component {
           "reservationPercent": 0.5,
           "totalCount": 903,
           freshInterval: {
-            1:0.1,
-            2:0.09,
+            1: 0.1,
+            2: 0.09,
           },
         }, {
           "date": '2018-01-28T16:00:00.000',
@@ -141,7 +140,7 @@ export default class AntvG2 extends Component {
       dataArr4.push({
         date: new Date(item.date).format('MM/dd'),
         count: item.orderNum,
-        percent:item.orderPercent,
+        percent: item.orderPercent,
       });
     });
 
@@ -173,7 +172,7 @@ export default class AntvG2 extends Component {
         },
       });
       //第二个轴
-      chart.col('percent',{
+      chart.col('percent', {
         alias: '活跃账户下单率',
       });
       chart.axis('percent', {
@@ -183,18 +182,18 @@ export default class AntvG2 extends Component {
         },
         line: null,
         tickLine: null,
-        labels:{
-          label:{
-            fill:'#CD6E55'
+        labels: {
+          label: {
+            fill: '#CD6E55'
           }
         }
       });
       chart.legend({
-        position:"bottom",
+        position: "bottom",
       });
       chart.intervalDodge().position('date*count').color('#5795B2');
       chart.line().position('date*percent').size(4).color('#CD6E55');
-      chart.point().position('date*percent').size(4).color('#CD6E55').shape('circle','borderRadius');
+      chart.point().position('date*percent').size(4).color('#CD6E55').shape('circle', 'borderRadius');
       chart.render();
     });
 
@@ -217,12 +216,12 @@ export default class AntvG2 extends Component {
   }
 
   render () {
-    const { charts=[], table } = this.state;
+    const { charts = [], table } = this.state;
     return <div>
       <br/>
       {
         charts.length > 0 ?
-          <div >
+          <div>
             {charts.map((item, index) => {
               return <div key={index}>
                 <h5>{item.title}</h5>

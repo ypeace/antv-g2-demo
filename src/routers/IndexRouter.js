@@ -5,6 +5,7 @@ import Echart from '../routers/EchartRouter';
 import AntvG2Routes from "../routers/AntvG2Routes";
 import MapRoutes from "../routers/MapRoutes";
 import ComponentRoutes from '../routers/ComponentRoutes'
+
 Date.prototype.format = function (fmt) {
   let o = {
     "M+": this.getMonth() + 1,                 //月份
@@ -36,7 +37,6 @@ class IndexRoute extends Component {
 
   componentWillMount () {
     const pathFirst = window.location.pathname.split('/')[1]||'g2';
-    console.log(pathFirst)
     this.setState({
       active: pathFirst
     })

@@ -21,7 +21,7 @@
     width: 200px;
     height: 200px;
     background-color: pink;
-    box-shadow: 30px 10px 30px 5px blue, 10px 20px 30px 25px red;
+    box-shadow: 30px 10px 30px 5px blue, 10px 20px 30px 25px deeppink;
 }
 
 .outline {

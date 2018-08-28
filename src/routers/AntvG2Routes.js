@@ -34,7 +34,7 @@ export default class AntvG2Routes extends Component {
   menu = [
     {
       path: '/BaseChart',
-      name: '基础图例22222222222222',
+      name: '基础图例',
       component: Point,
       title: '柱状图、点图dain 、线图'
     }, {

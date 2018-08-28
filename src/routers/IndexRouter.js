@@ -49,6 +49,7 @@ class IndexRoute extends Component {
         <div className="container">
           <div className="header">
             <ul className="nav-list">
+                <span>进入项目步骤->点击 G2->点击（！！重要）左边的图例就显示了（项目做得比较早，值随便搭架子凑着用来装g2的代码） </span>
               <li
                 onClick={() => {
                   this.setState({

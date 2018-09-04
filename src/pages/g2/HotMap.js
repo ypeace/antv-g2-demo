@@ -89,11 +89,11 @@ export default class HotMap extends Component {
       chart.intervalStack()
         .position(Stat.summary.percent('value'))
         .color('name')
-        // .label('name*..percent', function (name, percent) {
-        //   percent = (percent * 100).toFixed(2) + '%';
-        //   // return name + ' ' + percent;
-        //   return null;
-        // });
+        .label('name*..percent', function (name, percent) {
+          percent = (percent * 100).toFixed(2) + '%';
+          return name + ' ' + percent;
+
+        });
       chart.render();
       // 设置默认选中
       let geom = chart.getGeoms()[0]; // 获取所有的图形

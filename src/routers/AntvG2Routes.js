@@ -19,6 +19,8 @@ export default class AntvG2Routes extends Component {
   }
 
   componentWillMount () {
+      //先拿到路径
+
     const pathFirst = window.location.pathname.split('/')[2] || 'BaseChart';
     const url = this.props.match.url;
     const pathForComponent = `${url}/${pathFirst}`;

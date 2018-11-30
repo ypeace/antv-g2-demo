@@ -28,7 +28,7 @@ Date.prototype.format = function (fmt) {
   return fmt;
 };
 
-class IndexRoute extends Component {
+class IndexRoute extends Component  {
   constructor () {
     super();
     this.state = {
